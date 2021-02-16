@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-sca">
+        <title>String handling</title>
+        <script lang="javascript" type="text/javascript">
+        window.onload = ()=>{
+            btnToUpperCase = document.getElementById("btnToUpperCase")
+            btnToUpperCase = document.getElementById("btnToLowerCase")
+            btnToUpperCase = document.getElementById("erroeMessage")
+
+            txtName = document.getElementById("txName")
+            divResult = document.getElementById("divResult")
+
+            btnToUpperCase.onclick = () =>
+            {
+                if(validate(txtName.value))
+                {
+                    erroeMessage.innerHTML = ""
+                    const strUpper = txtName.value.toUpperCase()
+                    divResult.innerHTML = `Result : ${strUpper}`
+                }
+            }
+        }
+        let name="Gagandeep Kaur"
+        function convertToUpperCase()
+        {
+            textName= document.getElementById("txtName")
+            console.log("TEST : " + txtName.value)
+            {
+            if(validate(txtName.value))
+            const strUpper = txtName.value.toUpperCase()
+            
+            divResult = document.getElementById("divResult")
+            divResult.innerHtml = `Result: ${strUpper}`
+        }
+        return false
+    }
+    btnToLowerCase.onclick = () =>
+    {
+        if(validate(txtName.value))
+        {
+
+        }
+    }
+            </script>
+    </head>
+    <body>
+        <h1>Javascript String Handling</h1>
+        <form>
+            Enter Your name: <input type="text" id="textName" placeholder="Enter your name">
+            <div id="divResult">Result</div>
+            <button id="btnToUpperCase" onclick="convertToUpperCase()" value="Uppercase"></button>
+            <button id="btnLowerCase" onclick="convertToUpperCase()" value="Uppercase"></button>
+        </form>
+    </body>
+
+</html>
