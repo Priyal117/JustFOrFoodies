@@ -14,13 +14,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Satisfy&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="CSS\Home.css" />
-        <link rel="stylesheet" href="CSS\Reservation.css" />
+        <link rel="stylesheet" href="Home.css" />
+        <link rel="stylesheet" href="Reservation.css" />
     </head>
     <body>
         <section id="showcase">
             <div class="container">
-                <h2>Just For Foodies</h2>
+                <h1>Just For Foodies</h1>
                 <p>CALL US:</br>800 3456 7890</p>
                 <p>CANADA-TORONTO,901 QUEEN STREET,</br>DOWNTOWN, CA-907</p>
             </div>
@@ -33,8 +33,9 @@
             
                 <nav>
                     <ul>
-                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a class="active" href="Home.html">Home</a></li>
                         <li><a href="Food_menu.html">Menu</a></li>
+                        
                         <li><a href="Reservation.html">Reservation</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
@@ -44,41 +45,40 @@
         </header>
         <main>
             <div class="form">
-                <h2>Make a Reservation</h2>
-                <script src="Reservation.js"></script>
-                <form action="#" method="post">
+                <h1>MAKE A RESERVATION</h1>
+                <form name="reservationForm" method="post">
                     <div class="elem-group">
                       <label for="name">Your Name</label>
-                      <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+                      <input type="text" id="name" name="name" placeholder="John Doe">
                     </div>
                     <div class="elem-group">
                       <label for="email">Your E-mail</label>
-                      <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+                      <input type="email" id="email" name="email" placeholder="john.doe@email.com">
                     </div>
                     <div class="elem-group">
                       <label for="phone">Your Phone</label>
-                      <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                      <input type="tel" id="phone" name="phone" placeholder="498-348-3872")>
                     </div>
                     <hr>
                     <div class="elem-group inlined">
-                      <label for="adult">Adults</label>
-                      <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+                      <label for="total_adults">Adults</label>
+                      <input type="number" id="total_adults" name="total_adults" placeholder="2">
                     </div>
                     <div class="elem-group inlined">
-                      <label for="child">Children</label>
-                      <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+                      <label for="total_children">Children</label>
+                      <input type="number" id="child" name="total_children" placeholder="2">
                     </div>
                     <div class="elem-group inlined">
-                      <label for="checkin-date">Check-in Date</label>
-                      <input type="date" id="checkin-date" name="checkin" required>
+                      <label for="checkin_date">Check-in Date</label>
+                      <input type="date" id="checkin_date" name="checkin_date">
                     </div>
                     <div class="elem-group inlined">
-                      <label for="checkout-date">Check-out Date</label>
-                      <input type="date" id="checkout-date" name="checkout" required>
+                      <label for="checkout_date">Check-out Date</label>
+                      <input type="date" id="checkout_date" name="checkout_date">
                     </div>
                     <div class="elem-group">
-                      <label for="room-selection">Select Table Preference</label>
-                      <select id="room-selection" name="room_preference" required>
+                      <label for="room_preference">Select Table Preference</label>
+                      <select id="room_preference" name="room_preference">
                           <option value="">Choose a table from the List</option>
                           <option value="connecting">Joint</option>
                           <option value="adjoining">Big</option>
@@ -88,7 +88,7 @@
                     <hr>
                     <div class="elem-group">
                       <label for="message">Anything Else?</label>
-                      <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                      <textarea id="message" name="message" placeholder="Tell us anything else that might be important."></textarea>
                     </div>
                     <button type="submit">Book Table</button>
                   </form>
@@ -99,12 +99,68 @@
       
         <footer class="footer">
             <div class="foo-link">
-                <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>
-                
-                     
+                <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>  
             </div>
-                    
-            </footer>
-<script src="CSS/Reservation.js"></script>
+        </footer>
+        
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js'></script>
+        <script src="Reservation.js"></script>
+        <script>
+            $(function() {
+                $("form[name='reservationForm']").validate({
+                    rules: {
+                        name: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 20
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        phone: {
+                            required: true
+                        },
+                        total_adults: {
+                            required: true,
+                            min: 1
+                        },
+                        total_children: {
+                            required: true,
+                            min: 0
+                        },
+                        checkin_date: {
+                            required: true,
+                            min: dateTomorrow,
+                        },
+                        checkout_date: {
+                            required: true
+                        },
+                        room_preference: {
+                            required: true
+                        },
+                        message: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        name: {
+                            required: "Please enter your name",
+                            minlength: "Your name should contain at least 3 characters",
+                            maxlength: "Your name should be maximum 20 characters",
+                        },
+                        email: "Please enter a valid email address",
+                        phone: "Please enter your phone number",
+                        total_children: {
+                            min: "This field can't be negative"
+                        },
+                    },
+                    submitHandler: function(form) {
+                        window.alert("The table is reserved");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
