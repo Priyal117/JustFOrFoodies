@@ -14,89 +14,118 @@
         <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Satisfy&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/Home.css" />
-        <link rel="stylesheet" href="CSS/Reservation.css" />
-        <link rel="stylesheet" href="CSS/contact.css"/>
+        <link rel="stylesheet" href="Home.css" >
+        <link rel="stylesheet" href="Reservation.css" >
+        <link rel="stylesheet" href="contact.css">
         <script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <section id="showcase">
-            <div class="container">
-                <h1>Just For Foodies</h1>
-                <p>CALL US:</br>800 3456 7890</p>
-                <p>CANADA-TORONTO,901 QUEEN STREET,</br>DOWNTOWN, CA-907</p>
-            </div>
-        </section>
-        <header>
-            <div class="container">
-                <div id="branding">
-                    <h1>Just For <span class="highlight"> Foodies</span></h1>
+        <style type="text/css">
+            #map{
+                *margin: 0;
+                padding: 0;
+                width:100%;
+                height:400px;
+            }
+            </style>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkXmt-g6QMtK5KQ8UgrxNnT1oYSg8TTGk&callback=initMap"
+            type="text/javascript"></script>
+            <script>
+                function initMap()
+                {
+                    var location = {lat: -25.363, lng:131.044};
+                    var map = new google.maps.Map(document.getElementById("map"),{
+                
+                        zoom:4,
+                        center: location
+                    });
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map
+                    });
+                }       
+            </script>
+                
+        </head>
+        <body>
+            <section id="showcase">
+                <div class="container">
+                    <h1>Just For Foodies</h1>
+                    <p>CALL US:</br>800 3456 7890</p>
+                    <p>CANADA-TORONTO,901 QUEEN STREET,</br>DOWNTOWN, CA-907</p>
                 </div>
-            
-                <nav>
-                    <ul>
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="Food_menu.html">Menu</a></li>
-                       
-                        <li><a href="Reservation.html">Reservation</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main class="main">
-            <img src="chef-istock-121127245.jpg"> 
+            </section>
+            <header>
+                <div class="container">
+                    <div id="branding">
+                        <h1>Just For <span class="highlight"> Foodies</span></h1>
+                    </div>
                 
-                <form id="form" name="contactForm" method="post" action="#">
-                    <h3>Contact Form</h3>
-                    <label> First Name: </label>
-                    <input type="text" id="firstname" name="firstname" placeholder="Name please...">
-                    <label> Last Name: </label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Name please...">
-                    <label>Email ID: </label>
-                    <input type="email" id="email" name="email" placeholder="website@email.com">
-                    <label>Contact No: </label>
-                    <input type="tel" id="phone" name="phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4})>
-                    <label>Message:</label>
-                    <textarea id="message" name="message" placeholder="Leave message here....." required></textarea>
-                    <input type="submit" value="Submit">
-                </form>
-                
-        </main>
-        <footer class="footer">
-            <div class="foo-link">
-                <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>
-            </div>
-        </footer>
-
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js'></script>
-        <script>
-            $(function() {
-                $("form[name='contactForm']").validate({
-                    rules: {
-                        firstname: "required",
-                        lastname: "required",
-                        email: {
-                            required: true,
-                            email: true
+                    <nav>
+                        <ul>
+                            <li><a class="active" href="Home.html">Home</a></li>
+                            <li><a href="Food_menu.html">Menu</a></li>
+                            <li><a href="Gallery.html">Gallery</a></li>
+                            <li><a href="Reservation.html">Reservation</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- <div id="map"></div> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d721.7834273756979!2d-79.41248313705911!3d43.64538638617578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34e3101d68d3%3A0x59f557615edb23ba!2s901%20Queen%20St%20W%2C%20Toronto%2C%20ON%20M6J%203X4%2C%20Canada!5e0!3m2!1sen!2sus!4v1617754770769!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <main class="main">
+                <img src="images/3.jpeg"> 
+                    
+                    <form id="form" name="contactForm" method="post" action="#">
+                        <h3>Contact Form</h3>
+                        <label> First Name: </label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Name please...">
+                        <label> Last Name: </label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Name please...">
+                        <label>Email ID: </label>
+                        <input type="email" id="email" name="email" placeholder="website@email.com">
+                        <label>Contact No: </label>
+                        <input type="tel" id="phone" name="phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4})>
+                        <label>Message:</label>
+                        <textarea id="message" name="message" placeholder="Leave message here....." required></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                    
+            </main>
+            <footer class="footer">
+                <div class="foo-link">
+                    <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>
+                </div>
+            </footer>
+    
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js'></script>
+            <script>
+                $(function() {
+                    $("form[name='contactForm']").validate({
+                        rules: {
+                            firstname: "required",
+                            lastname: "required",
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            phone: "required",
+                            message: "required"
                         },
-                        phone: "required",
-                        message: "required"
-                    },
-                    messages: {
-                        firstname: "Please enter your firstname",
-                        lastname: "Please enter your lastname",
-                        email: "Please enter a valid email address",
-                        phone: "Please enter your phone number",
-                        message: "Please write message",
-                    },
-                    submitHandler: function(form) {
-                        window.alert("Thank you for getting in touch! ");
-                    }
+                        messages: {
+                            firstname: "Please enter your firstname",
+                            lastname: "Please enter your lastname",
+                            email: "Please enter a valid email address",
+                            phone: "Please enter your phone number",
+                            message: "Please write message",
+                        },
+                        submitHandler: function(form) {
+                            window.alert("Thank you for getting in touch! ");
+                        }
+                    });
                 });
-            });
-        </script>
-    </body>
-</html>
+            </script>
+        </body>
+    </html>

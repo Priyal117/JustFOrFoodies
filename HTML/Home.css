@@ -1,0 +1,157 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font: 15px/1.5 ;
+    padding: 0;
+    margin: 0;
+    background-color:lightyellow;
+}
+
+/* main */
+.container{
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+
+}
+.row img{
+    height: 350px;
+    width: 500px;
+    margin-left: 40px;
+}
+
+.row > div {
+    padding: 5rem;
+    width: 700px;
+
+}
+
+
+ul{
+    margin: 0;
+    padding:0;
+}
+/*Header*/
+
+header{
+    background-image: url(nav-image.jpg);
+    color: white;
+    padding-top: 25px;
+    min-height: 70px;
+    border-bottom: yellow 3px solid;
+
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Abel', sans-serif;
+}
+
+
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+    
+
+}
+header #branding{
+    float: left;
+     
+}
+
+header #branding h1{
+    margin: 0;
+    
+}
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+header .highlight, header .active a{
+    color: yellow;
+    font-weight: bold;
+}
+
+header a:hover{
+    color:yellow;
+    font-weight: bold;
+
+}
+
+/*showcase*/
+
+#showcase{
+    min-height: 450px;
+    background:url('showcasw2.jpg') no-repeat -250px -150px;
+    text-align: center;
+    color: white;
+
+}
+
+#showcase h1{
+    font-family: 'Dancing Script', cursive;
+    margin-top: 200px;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+#showcase p {
+ 
+    font-size: 20px;
+    font-family: 'Abel', sans-serif;
+}
+
+.footer {
+    background: url(nav.jpg);
+    margin-top: 55px;
+    padding: 15px 0;
+  }
+  
+.foo-link {
+    margin: auto;
+    display: flex;
+    width: 50%;
+  }
+  
+.footer h1{
+    
+    color: #fff; 
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+  }
+.footer span {
+    color: yellow;
+}
+.call h3{
+    float: right;
+}
+
+@media only screen and (max-width:768px){
+    .foo-link {
+        flex-direction: column;
+      }
+    
+      .footer a {
+        margin: 10px 0;
+      }
+  }
+
+  img{
+      margin-top: 30px;
+      margin-left: 20px;
+      width: 70%; 
+      height: 380px;
+  }
