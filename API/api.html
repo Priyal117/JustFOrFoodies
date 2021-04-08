@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://covid-193.p.rapidapi.com/statistics",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "cde71d088amshde7c49e9b978db2p1beba3jsn84b14eb792fd",
+		"x-rapidapi-host": "covid-193.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	var keys = [];
+	console.log(response)
+	//console.log(response.response[0].continent)
+  // $("#user_data").append(response.response[0].continent + "<br/>")
+
+for(var i=0;i<response.response.length;i++)
+{
+
+  $("#user_data").append("continent:"+response.response[i].continent +"</br>country:"+response.response[i].country+"</br>"+response.response[i].deaths.total+":<br/>total death:")
+  $("#user_data").append(response.response[i].country + "<br/>")
+
+}
+});   /*response.forEach(user => {
+                 console.log(user[0].continent)
+
+ $("#user_data").append(user.response[0].continent + "<br/>")
+               // console.log(user.name, user.username, user.address.geo.lat)
+               // li_data = li_data + "<li>" + user.name + "</li>"
+            });
+});*/
+   /* for(var key in response)
+    {
+    	for(var k in key)
+    	{
+    $("#user_data").append(k.continent.value + "<br/>") 		
+    	}
+   	
+    }*/
+	/*for (var key in response) {
+		for(var d in key)
+  if (response.hasOwnProperty(key)) {
+    $("#user_data").append(response[key.d.continent] + "<br/>")*/
+	
+  //}
+//});
+/*response.forEach(user => {
+                 console.log(user.continent)
+               // console.log(user.name, user.username, user.address.geo.lat)
+               // li_data = li_data + "<li>" + user.name + "</li>"
+            });
+});
+*/
+/*$(document).ready(function()
+	{ 
+		$.ajax({ 
+			type:"get", 
+			url:"http://api.openchargemap.io/v2/poi/?output=json&countrycode=NL&maxresults=10",
+			 success: function(data)
+			 { result=""; 
+			 for(i in data){ result+="ID: "+data[i].ID+" // UUID: "+data[i].UUID+"<br>"; 
+			} 
+		$("#list").html(result); } }); });*/
+</script>
+</head>
+<body>
+<div id="user_data">
+</div>
+</body>
+</html>

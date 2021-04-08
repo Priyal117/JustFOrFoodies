@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 th{
+		 	background-color: blue;
+		 }
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://covid-193.p.rapidapi.com/statistics",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "cde71d088amshde7c49e9b978db2p1beba3jsn84b14eb792fd",
+		"x-rapidapi-host": "covid-193.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	var keys = [];
+	console.log(response)
+	
+$("#user_data").append("<tr><th>Continent</th><th>Country</th><th>Active Cases</th><th>Total cases</th><th>date</th></tr></tr>")
+
+for(var i=0;i<response.response.length;i++)
+{
+	if(response.response[i].continent===null)
+	{
+		response.response[i].continent="No Continent";
+	}
+	$("#user_data").append("<tr><td>"+response.response[i].continent+"</td><td>"+response.response[i].country+"</td><td>"+response.response[i].cases.active+"</td><td>"+response.response[i].cases.total+"</td><td>"+response.response[i].day+"</td></tr>")
+
+
+}
+}); 
+</script>
+</head>
+<body>
+<table id="user_data">
+</table>
+
+</body>
+</html>
