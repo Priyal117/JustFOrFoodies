@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Juicy and delicious cuisines">
+        <meta name="keywords" content="web design">
+        <title>Just For Foodies | Welcome</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/Home.css" type="text/css">
+        <link rel="stylesheet" href="CSS/Reservation.css" type="text/css">
+        
+        <style>
+
+          body {font-family: Arial, Helvetica, sans-serif;
+          text-align: center;}
+          form {border: 3px solid #f1f1f1;}
+          
+          input[type=text], input[type=password] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+          
+          button {
+            background-color: #05850c;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+            text-align: center;
+          }
+          
+          button:hover {
+            opacity: 0.8;
+          }
+
+          a:link, a:visited {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+          }
+          
+          .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #691c17;
+            float: left;
+          }
+
+          .signupbtn{
+            width: auto;
+            padding: 10px 18px;
+            background-color: #05850c;
+            float: right;
+          }
+          
+          .sign_container {
+            padding: 150px;
+          }
+          
+          span.psw {
+            float: right;
+            padding-top: 16px;
+          }
+          
+          /* Change styles for span and cancel button on extra small screens */
+          @media screen and (max-width: 300px) {
+            span.psw {
+               display: block;
+               float: none;
+            }
+            .cancelbtn {
+               width: 100%;
+            }
+          }
+          </style>
+
+    </head>
+    <body>
+        <section id="showcase">
+            <div class="container">
+                <h1>Just For Foodies</h1>
+                
+                <p>CALL US:</br>800 3456 7890</p>
+                <p>CANADA-TORONTO,901 QUEEN STREET,</br>DOWNTOWN, CA-907</p>
+            </div>
+        </section>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Just For <span class="highlight"> Foodies</span></h1>
+                </div>
+            
+                <nav>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="Food_menu.html">Menu</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                        <li><a href="Reservation.html">Reservation</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                        <li><a href="API/api1.html">Covid-19 Results</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>  
+    
+
+    <div class="form">
+    <form name="reservationForm" method="post">
+    
+        <div class="sign_container">
+          <div class="elem-group">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="name" required><br></div>
+    
+        <div class="elem-group">
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required><br>
+        </div>  
+
+        <button type="submit"><a href="Home.html">Login</a></button><br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn"><a href="Home.html">Cancel</a></button>
+        <span type="button"><button class="signupbtn"><a href="signup.html">DO NOT HAVE A ACCOUNT? SIGN UP.</a></span></button>
+      </div>
+    </form>
+  </div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js'></script>
+    <script src="Reservation.js"></script>
+    <script>
+      $(function() {
+          $("form[name='reservationForm']").validate({
+              rules: {
+                  name: {
+                      required: true,
+                      minlength: 3,
+                      maxlength: 20
+                  },
+                  message: {
+                      required: true
+                  }
+              },
+              messages: {
+                  name: {
+                      required: "Please enter your name",
+                      minlength: "Your name should contain at least 3 characters",
+                      maxlength: "Your name should be maximum 20 characters",
+                  },
+  
+              },
+              submitHandler: function(form) {
+                  window.alert("signed In");
+              }
+          });
+      });
+  </script>
+
+    <footer class="footer">
+      <div class="foo-link">
+          <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>  
+      </div>
+    </footer>
+  
+</body>
+</html>
