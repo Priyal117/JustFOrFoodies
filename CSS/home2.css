@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  /*font-family: Arial, Helvetica, sans-serif;*/
+}
+.head{
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  font-size: 50px;
+  
+}
+
+.content{
+  /*width: 80%;
+  margin: auto;
+  overflow: hidden;*/
+  width: 1340px;
+    
+    overflow: hidden;
+    padding: 2px;
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.text1 {
+  float: left;
+  width: 63.66666%;
+  padding: 50px;
+}
+
+.image1 {
+  float: left;
+  width: 33.33333%;
+  padding:20px ;
+}
+
+img {
+  display: block;
+  /*height: 200%;
+  width: 300%;*/
+  /*max-width: 100%;*/
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .text1,
+  .image1 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}

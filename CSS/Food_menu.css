@@ -1,0 +1,73 @@
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 280px;
+  perspective: 1000px;
+  padding: 20px 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.7, -0.39, 0.5, 1.5);
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* -webkit-backface-visibility: hidden; */
+  backface-visibility: hidden;
+}
+
+.flip-card-front img{
+  width: 100%;
+  height: 280px;
+}
+
+.flip-card-back {
+  background:url('nav.jpg');
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.trending{
+  margin: 50px 0;
+}
+
+.menu{
+  display: flex;
+  padding: 5px;
+}
+
+.flip-card button{
+  background-color:maroon;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  
+}
+section h2{
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  font-size: 50px;
+}
+
+.trending p,h1{
+  font-family: 'Maven Pro', sans-serif;
+}
+

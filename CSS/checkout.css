@@ -1,0 +1,69 @@
+.left_panel{
+    float: left;
+    width: 60%;
+}
+.right_panel{
+    float: left;
+    width: 60%;
+    
+}
+.panel_clear {
+    clear: both;
+}
+.order_title {
+    text-align:left;
+}
+
+.order_price {
+    text-align: center;
+}
+
+button{
+    background-color:maroon;
+    color: oldlace;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.remove_button{
+    margin-left: 20%;
+}
+
+.order_count {
+    font-size: 25px;
+}
+
+.order_title {
+    margin-top: 30px;
+    
+    
+}
+.box{
+    color:black;
+    padding: 50px;
+    border: 2px solid black;
+    
+    
+}
+
+#order_content {
+    padding-left: 10%;
+    padding-right:10%;
+    margin-left: 80px;
+    margin-right: 50px;
+}
+
+.order_item {
+    float: left;
+    width: 50%;
+}
+h2{
+    text-align: center;
+    font-family: 'Satisfy', cursive; 
+    font-size: 50px; 
+}
+.position{
+    float: right;
+    
+
+}
