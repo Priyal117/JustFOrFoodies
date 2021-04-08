@@ -55,13 +55,23 @@
 
         <section class="box">
         <div class="order_title">
+            <h1 style="font-family: 'Satisfy', cursive;
+            text-align: center;
+            font-size: 50px;">Make payment</h1>
             <span class="order_count">Order Count: <span id="order_count">0</span></span>&nbsp;&nbsp;&nbsp;<br>
             <span class="order_count">Total Price: $<span id="total_price">0</span></span>
             <div class="position">
                 <button id="btn" onclick="window.location = 'Food_menu.html'">Add More Items</button>
             </div>
             <br><br>
-            <h3>Select your payment method</h3>
+            <form id="form" name="checkoutform" method="post" action="#"></form>
+            <label for="text">Enter your name:</label>
+            <input type="text" placeholder="name" name="name" required><br><br>
+            <label for="number">Enter Card number /Account number:</label>
+            <input type="number" placeholder="Card/Account number" name="number" required><br><br>
+            <label for="number">CVV/Sercurity code:</label>
+            <input type="number" placeholder="CVV/code" name="CVV" required><br><br>
+            <h3 style="font-family: 'Abel', sans-serif;"><ul>select your payment method</ul> </h3>
             <div id="payment">
                 <input type="radio" name="master" id="pay" />
                     <img src="images/master.png" />
@@ -75,12 +85,12 @@
                     <img src="images/maestro.png" />
                     <input type="radio" name="master" id="pay" />
                     <img src="images/banktransfer.png" /><br><br><br><br>
-                    <button style="background-color:maroon">Make a payment</button>
+                    <button style="background-color:maroon" onclick="myFunction()">Make a payment</button>
                    
                   
             
                
-            </div>
+            </div></form>
 
         </div>
         </section>
@@ -92,6 +102,39 @@
                 <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>  
             </div> 
         </footer>
+        <script>
+            function myFunction() {
+              alert("Your payment has been made Sucessfully!!");
+            }
+            </script>
+            
+        <script>
+            $(function() {
+                $("form[name='checkoutform']").validate({
+                    rules: {
+                        name: "required",
+                        number:{ 
+                            minlength:10,
+                            required:true
+                        } ,
+                        CVV: {
+                            minlength:3,
+                            required: true
+                            
+                        },
+                    },
+                    messages: {
+                        name: "Please enter correct name",
+                        number: "Please enter 10 digit number",
+                        CVV: "Please enter correct code",
+                    
+                    },
+                    submitHandler: function(form) {
+                        window.alert("Thank You! Your payment has been done sucessfully!! ");
+                    }
+                });
+            });
+        </script>
 
         <script src="script/animate.js"></script>
         <script src="script/checkout.js"></script>
