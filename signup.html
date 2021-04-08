@@ -139,7 +139,7 @@
           
               <div class="elem-group">
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required><br>
+              <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   required><br>
               </div>
 
               
@@ -153,10 +153,13 @@
             </div>
           </form>
 
+          
+
           <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
           <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js'></script>
-          <script src="Reservation.js"></script>
+          <script src="scrpit/Reservation.js"></script>
           <script>
+
               $(function() {
                   $("form[name='reservationForm']").validate({
                       rules: {
@@ -180,13 +183,16 @@
                               maxlength: "Your name should be maximum 20 characters",
                           },
                           email: "Please enter a valid email address",
+                          psw: "Please enter valid password",
                       },
                       submitHandler: function(form) {
-                          window.alert("The table is reserved");
+                          window.alert("Successfully created your account");
                       }
                   });
               });
-          </script>
+          
+              
+              </script>
 
           <footer class="footer">
             <div class="foo-link">
@@ -196,3 +202,4 @@
 
   </body>
 </html>
+
