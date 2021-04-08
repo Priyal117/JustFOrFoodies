@@ -54,6 +54,8 @@ function draw_checkout() {
     total_price = 0;
     count = 0;
     order_list.map((idx)=>{
+        if(idx == undefined)
+            return;
         food = food_list[idx];
         htmlStr += `<div class="order_item"><div >
                         <img src="${food.img_scr}" width="100%" alt="Avatar" class="left_panel"/>                    
@@ -71,6 +73,7 @@ function draw_checkout() {
     total_price *= 100;
     total_price = Math.round(total_price);
     total_price /= 100;
+    console.log(htmlStr);
     document.getElementById("order_content").innerHTML = htmlStr;
     document.getElementById("order_count").innerText = count;
     document.getElementById("total_price").innerText = total_price;

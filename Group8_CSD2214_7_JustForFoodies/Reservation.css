@@ -1,7 +1,5 @@
-h2{
-    font-family: 'Satisfy', cursive;
+h1{
     text-align: center;
-    font-size: 50px;
 }
 .form {
     width:60%;
@@ -56,10 +54,10 @@ h2{
     border: 1px dotted #ccc;
   }
   
-  button {
+button {
     height: 50px;
     width: 300px;
-    margin-left: 280px;
+    /* margin-left: 0; */
     background: #006666;
     border: none;
     color: white;
@@ -67,9 +65,12 @@ h2{
     font-family: 'Nanum Gothic';
     border-radius: 4px;
     cursor: pointer;
-  }
+    margin: auto;
+    display: inherit;
+}
   
   button:hover {
     border: 2px solid black;
   }
+
 

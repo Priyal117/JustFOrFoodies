@@ -7,8 +7,7 @@ body {
     /*width: 80%;
     margin: auto;
     overflow: hidden;*/
-    padding: 0 64px 64px 64px;
-    padding-top: 56px;
+    padding: 0 50px 0px;
 }
 
 .row:after {
@@ -26,7 +25,7 @@ body {
 .image1 {
     float: left;
     width: 33.33333%;
-    padding:20px ;
+    padding: 20px;
   }
 
 img {
@@ -36,7 +35,23 @@ img {
     /*max-width: 100%;*/
   }
 
+/*.image1{
+   
+    float: left;
+    height: 400px;
+    width: 500px;
+    margin: 30px;
+    
+}
 
+.image2{
+       
+    float: right;
+    height: 400px;
+    width: 500px;
+    margin: 30px;
+    
+}*/
 
 @media screen and (max-width: 1000px) {
     .text1,
