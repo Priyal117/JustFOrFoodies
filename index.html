@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Juicy and delicious cuisines">
+        <meta name="keywords" content="web design">
+        <title>Just For Foodies | Welcome</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/Home.css" type="text/css">
+        <link rel="stylesheet" href="CSS/home2.css" type="text/css">
+        
+        
+    </head>
+    <body>
+        <section id="showcase">
+            <div class="container">
+                <h1>Just For Foodies</h1>
+                
+                <p>CALL US:</br>800 3456 7890</p>
+                <p>CANADA-TORONTO,901 QUEEN STREET,</br>DOWNTOWN, CA-907</p>
+            </div>
+        </section>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Just For <span class="highlight"> Foodies</span></h1>
+                </div>
+            
+                <nav>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="Food_menu.html">Menu</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                        <li><a href="Reservation.html">Reservation</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="API/api1.html">Covid-19 Results</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>  
+        
+        
+        <main class="content">
+            <h2 class="head">Our Famous Dishes</h2>
+            <div class = "row" data-aos="fade-left">
+            <img src="images/WEB_Breakfast_HashPoachedEggs_800x800.jpg" alt="">
+            <div>
+                <p style="font-family: 'Abel', sans-serif;"><span style="font-size:36px;font-family: 'Dancing Script', cursive;">Omelette Salad</span></br></br>
+                    This omelette salad is so simple and you have a protein in 
+                    your meal in no time.<br> It is a combination of the sour, 
+                    salty, and sweet taste and it just works so well in this dish.
+            </p>
+            </div>
+        </div>
+
+        <div class = "row" data-aos="fade-left">
+            <img src="images/falafel burger.webp" alt="">
+            <div>
+                <p style="font-family: 'Abel', sans-serif;"><span style="font-size:36px;font-family: 'Dancing Script', cursive;">Falafel burger</span></br></br>
+                    A healthy burger that's filling too. These are great for anyone after a satisfying bite low in calories.
+                
+            </p>
+            </div>
+        </div>
+
+        <div class = "row" data-aos="fade-left">
+            <img src="images/food_picture_05_hd_picture_167519.jpg" alt="">
+            <div>
+                <p style="font-family: 'Abel', sans-serif;"><span style="font-size:36px;font-family: 'Dancing Script', cursive;">Ground Beef Tacos</span></br></br>
+                    These Ground Beef Tacos are made with a deliciously seasoned ground beef filling,<br> 
+                    served in corn tortillas and finished with all the best toppings.<br> 
+                    They’re likely to become a go-to weeknight dinner the whole family will enjoy.
+                
+            </p>
+            </div>
+        </div>
+        </main>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="images/Food-Banner-1.jpg" width="1340" height="450">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="images/food-banner-5.jpg" width="1340" height="450">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="images/food-banner-7.png" width="1340" height="450">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/food-banner-3.jpg" width="1340" height="450">
+              </div>
+
+              <div class="mySlides fade">
+                <img src="images/food-banner-4.jpg" width="1340" height="450">
+              </div>
+
+              <div class="mySlides fade">
+                <img src="images/food-banner-2.jpg" width="1340" height="450">
+              </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span> 
+            </div>
+            
+            <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+            
+        
+        <footer class="footer">
+            <div class="foo-link">
+                <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>  
+            </div>
+        </footer>
+       
+    </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset:400,
+          duration: 1000
+      });
+    </script>
+</html>
