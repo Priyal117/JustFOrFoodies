@@ -189,6 +189,7 @@ header a:hover{
 .footer {
     background:url('nav.jpg');
     padding: 15px 0;
+    padding-left: 150px;
   }
   
 .foo-link {
