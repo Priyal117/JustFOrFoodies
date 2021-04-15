@@ -48,14 +48,14 @@
         <main>
             <div class="form">
                 <h1>Make a Reservation</h1>
-                <form name="reservationForm" method="post">
+                <form id="myform" name="reservationForm" method="post">
                     <div class="elem-group">
                       <label for="name">Your Name</label>
-                      <input type="text" id="name" name="name" placeholder="John Doe">
+                      <input type="text" id="name" name="name" placeholder="Chirag Vegad">
                     </div>
                     <div class="elem-group">
                       <label for="email">Your E-mail</label>
-                      <input type="email" id="email" name="email" placeholder="john.doe@email.com">
+                      <input type="email" id="email" name="email" placeholder="chirag.vegad@email.com">
                     </div>
                     <div class="elem-group">
                       <label for="phone">Your Phone</label>
@@ -92,7 +92,7 @@
                       <label for="message">Anything Else?</label>
                       <textarea id="message" name="message" placeholder="Tell us anything else that might be important."></textarea>
                     </div>
-                    <button type="submit">Book Table</button>
+                    <button type="submit" onclick="myFunction()" value="Reset form">Book Table</button>
                   </form>
             </div>
 
@@ -164,5 +164,11 @@
                 });
             });
         </script>
+
+    <script>
+        function myFunction() {
+        document.getElementById("myform").reset();
+        }
+    </script>
     </body>
 </html>
