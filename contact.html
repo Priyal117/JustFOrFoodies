@@ -91,7 +91,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4})>
                         <label>Message:</label>
                         <textarea id="message" name="message" placeholder="Leave message here....." required></textarea>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" onclick="myFunction()" value="Reset form">
                     </form>
                     
             </main>
@@ -129,5 +129,12 @@
                     });
                 });
             </script>
+
+            <script>
+                function myFunction() {
+                document.getElementById("form").reset();
+                }
+            </script>
+
         </body>
     </html>
