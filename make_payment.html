@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Juicy and delicious cuisines">
+        <meta name="keywords" content="web design">
+        <title>Just For Foodies | Welcome</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS\Home.css">
+        <link rel="stylesheet" href="CSS/make_payment.css">
+        <!-- <link rel="stylesheet" href="CSS/Reservation.css"> -->
+
+        
+    </head>
+    <body>
+        <section id="showcase">
+            <div class="container">
+                <h1>Just For Foodies</h1>
+                <p>CALL US:</br>800 3456 7890</p>
+                <p>CANADA-TORONTO,901 QUEEN STREET,</br>DOWNTOWN, CA-907</p>
+            </div>
+        </section>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Just For <span class="highlight"> Foodies</span></h1>
+                </div>
+            
+                <nav>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="Food_menu.html">Menu</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                        <li><a href="Reservation.html">Reservation</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="API/api1.html">Covid-19 Results</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+            <div class="container">
+            <div class="row">
+            <div class="col-75">
+                <div class="form">
+                <div class="container_box">
+                    <form id="myform" name="reservationForm" method="post">
+                
+                    <div class="row">
+                    <div class="col-50">
+                        <div class="elem-group">
+                        
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <input type="text" id="fname" name="name" placeholder="John M. Doe">
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="john@example.com">
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="New York">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" placeholder="NY">
+                        <label for="zip">Zip</label>
+                        <input type="text" id="zip" name="zip" placeholder="10001">
+                        
+                    
+
+                    
+                        <h2>Payment Details</h2><br>
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                        <label for="expyear">Exp Year</label>
+                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                        </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+                    <input type="submit" value="Make Payment" class="btn" onclick="myFunction()" value="Reset form">
+                </form>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- <div class="col-25">
+                <div class="container">
+                <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                <hr>
+                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                </div> -->
+            </div>
+            </div>
+
+            <footer class="footer">
+                <div class="foo-link">
+                    <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>  
+                </div>
+            </footer>
+
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js'></script>
+        <script src="script/Reservation.js"></script>
+        <script>
+            $(function() {
+                $("form[name='reservationForm']").validate({
+                    rules: {
+                        name: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 20
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        city: {
+                            required: true
+                        },
+                        state: {
+                            required: true,
+                        },
+                        zip: {
+                            required: true,
+                            min: 0
+                        },
+                        cardname: {
+                            required: true,
+                        },
+                        cardnumber: {
+                            required: true
+                        },
+                        expmonth: {
+                            required: true
+                        },
+                        expyear: {
+                            required: true
+                        },
+                        cvv: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        name: {
+                            required: "Please enter your name",
+                            minlength: "Your name should contain at least 3 characters",
+                            maxlength: "Your name should be maximum 20 characters",
+                        },
+                        email: "Please enter a valid email address",
+                        city: "Please enter your city",
+                        state: "Please enter your state",
+                        zip: "Please enter valid zip",
+                        cardname: {
+                                required: true,
+                                minlength: 3,
+                                maxlength: 20 
+                        },
+                        cardnumber: { 
+                            minlength:10,
+                            required:true
+                        },
+                        cvv: {
+                            minlength:3,
+                            required: true 
+                        },
+                    },
+                    submitHandler: function(form) {
+                        window.alert("Payment is successfully made");
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            function myFunction() {
+            document.getElementById("myform").reset();
+            }
+        </script>
+
+</body>
+</html>
