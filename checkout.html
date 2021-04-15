@@ -64,13 +64,13 @@
                 <button id="btn" onclick="window.location = 'Food_menu.html'">Add More Items</button>
             </div>
             <br><br>
-            <form id="form" name="checkoutform" method="post" action="#"></form>
+            <!-- <form id="form" name="checkoutform" method="post" action="#">
             <label for="text">Enter your name:</label>
             <input type="text" placeholder="name" name="name" required><br><br>
             <label for="number">Enter Card number /Account number:</label>
             <input type="text" placeholder="Card/Account number" name="number" required><br><br>
             <label for="number">CVV/Sercurity code:</label>
-            <input type="text" placeholder="CVV/code" name="CVV" required><br><br>
+            <input type="text" placeholder="CVV/code" name="CVV" required><br><br> -->
             <h3 style="font-family: 'Abel', sans-serif;"><ul>select your payment method</ul> </h3>
             <div id="payment">
                 <input type="radio" name="master" id="pay" />
@@ -85,7 +85,7 @@
                     <img src="images/maestro.png" />
                     <input type="radio" name="master" id="pay" />
                     <img src="images/banktransfer.png" /><br><br><br><br>
-                    <button style="background-color:maroon" onclick="myFunction()">Make a payment</button>
+                    <button style="background-color:maroon"><a href="make_payment.html">Make a payment</a></button>
                    
                   
             
@@ -102,17 +102,21 @@
                 <h1>Just For Foodies<span class="copy">&copy; Copyright </span></h1>  
             </div> 
         </footer>
-        <script>
+        <!-- <script>
             function myFunction() {
               alert("Your payment has been made Sucessfully!!");
             }
-            </script>
+            </script> -->
             
         <script>
             $(function() {
                 $("form[name='checkoutform']").validate({
                     rules: {
-                        name: "required",
+                        name: {
+                                required: true,
+                                minlength: 3,
+                                maxlength: 20
+                            },
                         number:{ 
                             minlength:10,
                             required:true
@@ -129,9 +133,9 @@
                         CVV: "Please enter correct code",
                     
                     },
-                    submitHandler: function(form) {
-                        window.alert("Thank You! Your payment has been done sucessfully!! ");
-                    }
+                    // submitHandler: function(form) {
+                    //     window.alert("Thank You! Your payment has been done sucessfully!! ");
+                    // }
                 });
             });
         </script>
